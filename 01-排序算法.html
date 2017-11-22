@@ -1,0 +1,18 @@
+<script>
+	function bubbleSort(arr){
+		var len = arr.length;
+		for(var i=0; i<len; i++){
+			for(var j=0; j<len-1-i; j++){
+				if(arr[j] > arr[j+1]){     // 相信元素比大小
+					var temp = arr[j+1];   // 元素位置交换，从小到大排列
+					arr[j+1] = arr[j];
+					arr[j] = temp;
+				}
+			}
+		}
+		return arr;
+	}
+	// 测试
+	var arr = [6,2,22,45,1,6,8,200,56,111];
+	console.log(bubbleSort(arr).join(','));
+</script>
